@@ -1,0 +1,938 @@
+body
+{
+    font-family: 'Bubbler One', sans-serif;
+}
+.border
+{
+    border: 2px red solid;
+}
+.m50
+{
+    margin-top: 80px;
+}
+.rouge
+{
+    color: #e7480f;
+}
+.green
+{
+    color: #20BAB6;
+}
+.m-50
+{
+    margin-top: -50px;
+}   
+/*----------medias queries-------*/
+    @media all and (max-width: 1024px) {
+        body {
+            margin-top: 80px;
+        }
+        .admin
+        {
+            padding: 10px;
+        }
+        .image_fond_beuk
+        {
+            display: none;
+        }     
+        div.dernierBD-ajout
+        {
+            margin: 2px;
+            box-shadow: 2px 4px 5px #191715;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-top: 1px #6A6A6A solid;
+            border-left: 1px #6A6A6A solid;
+        }
+        div.panel-heading.dash-header
+        {
+            height: 40px;
+        }
+        
+       i.fa-4x.dash
+        {
+            font-size: 23px;
+        }
+        
+       div.text-dash-bd
+        {
+            display: flex;
+            justify-content: space-between;
+            width: 28%;
+            float: right;
+        }
+        div.text-dash-bd-epub
+        {
+            display: flex;
+            justify-content: space-between;
+            width: 24%;
+            float: right;
+        }
+        div.text-dash-manga
+        {
+            display: flex;
+            justify-content: space-between;
+            width: 33%;
+            float: right;
+        }
+        div.text-dash-manga-epub
+        {
+            display: flex;
+            justify-content: space-between;
+            width: 33%;
+            float: right;
+        }
+        .panel-bd-papier
+        {
+            margin-bottom: 5px;
+            background: #e7480f;
+        }
+        .panel-bd-epub
+        {
+            margin-bottom: 5px;
+            background: rgba(171, 231, 15, 0.8);
+        }
+        .panel-manga-papier
+        {
+            margin-bottom: 5px;
+            background: #1BC6EF;
+        }
+        .panel-manga-epub
+        {
+            margin-bottom: 25px;
+            background: #ECE70D;
+        }
+        div.div-one-shot
+        {
+            margin: 15px;
+        }
+        .modal-serie-lg
+        {
+            width: 100%;
+            padding: 20px;
+            margin: auto;
+        }
+        .cover-modal-serie
+        {
+            display: block;
+            width: 93px;
+            height: 128px;
+            margin-bottom: 10px;
+        }
+    
+
+
+        
+        
+    }
+    @media(max-width: 736px)
+    {
+        .navbar-form.search
+        {
+            width: 85%;
+            position: fixed;
+            top: 0;
+           border: 0;
+           margin: auto;
+        }
+    }
+
+    @media(max-width: 375px)
+    {
+        div.dashboard-row
+        {
+            display: none;
+        }
+        footer.footer
+        {
+            display: none;
+        }
+        div.div-dessin-papillon/*dessin dashboard*/
+        {
+            display: none;
+        }
+        .chat .pull-right
+        {
+          font-size: 9px;      
+          width: 80px;
+          text-align: right;
+        }
+
+        .chat .name_album
+        {
+            font-size: 13px;
+        }
+         .chat .serie
+        {
+            font-size: 13px;
+        }
+        .modal-serie-lg
+        {
+            width: 100%;
+            padding: 20px;
+            margin: auto;
+        }
+        
+        h4.modal_titreAlbum
+        {
+            width: 80px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #e7480f;
+            margin: 0;
+        }
+        .cover-modal-serie
+        {
+            display: block;
+            width: 93px;
+            height: 128px;
+            margin-bottom: 10px;
+        }
+        .strong-name-serie
+        {
+            font-size: 12px;
+            display: block;
+            line-height: 2.8;
+        }
+        .strong-genre-serie
+        {
+            font-size: 12px;
+            display: block;
+            line-height: 2.8;
+        }
+         img.img-circle.index-genre
+         {
+            width: 110px;
+            height: 110px;
+         }   
+
+    }
+    @media(max-width: 414px)
+    {
+        div.div-dessin-papillon/*dessin dashboard*/
+        {
+            display: none;
+        }
+         .cover-modal-serie
+        {
+            display: block;
+            width: 93px;
+            height: 128px;
+            margin-bottom: 10px;
+        }
+         
+        .navbar-form.search
+        {
+            width: 75%;
+            position: fixed;
+            top: 0;
+           border: 0;
+           margin: auto;
+        }
+        li.serie-complete
+        {
+           
+        
+            display: flex;
+        }
+        .strong-name-serie
+        {
+            font-size: 14px;
+            display: block;
+            line-height: 2.3;
+        }
+        .strong-genre-serie
+        {
+            font-size: 14px;
+            display: block;
+            line-height: 2.3;
+        }
+       
+        
+    }
+    @media(min-width:768px) {
+        body {
+            margin-top: 50px;
+        }
+        .admin
+        {
+            padding: 50px;
+        }
+        .panel-bd-papier
+        {
+            margin-bottom: 15px;
+        }
+        .panel-bd-epub
+        {
+            margin-bottom: 15px;
+        }
+        .panel-manga-papier
+        {
+            margin-bottom: 15px;
+        }
+        .panel-manga-epub
+        {
+            margin-bottom: 25px;
+        }
+        
+        .modal-serie-lg
+        {
+            width: 90%;
+            padding: 20px;
+            margin: auto;
+        }
+        .cover-modal-serie
+        {
+            display: block;
+            width: 93px;
+            height: 125px;
+            margin-bottom: 10px;
+        }
+        
+    }
+
+    #wrapper {
+        padding-left: 0;    
+    }
+    
+    #page-wrapper {
+        width: 100%;        
+        padding: 0;
+        background-color: #fff;
+    }
+
+    @media(min-width:768px) {
+        #wrapper {
+            padding-left: 225px;
+        }
+
+        #page-wrapper {
+            padding: 22px 10px;
+        }
+        .strong-name-serie
+            {
+                
+                font-size: 16px;
+
+            }
+        
+    }
+    @media(min-width:1366px) {
+        .modal-serie-lg
+            {
+                width: 70%;
+                padding: 20px;
+                margin: auto;
+            }
+            .cover-modal-serie
+            {
+                display: block;
+                width: 103px;
+                height: 148px;
+                margin-bottom: 10px;
+            }
+            .strong-name-serie
+            {
+                
+                font-size: 18px;
+            }
+           
+
+        }
+
+/*---------Top Navigation---------*/
+    nav.navbar
+    {
+        background: #141414; /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient(#141414, #434343, #141414); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(#141414, #434343, #141414); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(#141414, #434343, #141414); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(#141414, #434343, #141414); /* Standard syntax */
+    }
+    .top-nav {
+        padding: 0 15px;
+    }
+
+    .top-nav>li {
+        display: inline-block;
+        float: left;
+    }
+
+    .top-nav>li>a {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        line-height: 20px;
+        color: #fff;
+    }
+
+    .top-nav>li>a:hover,
+    .top-nav>li>a:focus,
+    .top-nav>.open>a,
+    .top-nav>.open>a:hover,
+    .top-nav>.open>a:focus {
+        color: #fff;
+        background-color: #1a242f;
+    }
+
+    .top-nav>.open>.dropdown-menu {
+        float: left;
+        position: absolute;
+        margin-top: 0;
+        /*border: 1px solid rgba(0,0,0,.15);*/
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        background-color: #fff;
+        -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    }
+
+    .top-nav>.open>.dropdown-menu>li>a {
+        white-space: normal;
+    }
+
+/*-----------Side Navigation------*/
+
+    @media(min-width:768px) {
+        .side-nav {
+            position: fixed;
+            top: 50px;
+            left: 225px;
+            width: 225px;
+            margin-left: -225px;
+            border: none;
+            border-radius: 0;
+            border-top: 1px rgba(0,0,0,.5) solid;
+            overflow-y: auto;
+            background-color: #222;
+            /*background-color: #5A6B7D;*/
+            bottom: 0;
+            overflow-x: hidden;
+            padding-bottom: 40px;
+        }
+
+        .side-nav>li>a {
+            width: 225px;
+            border-bottom: 1px rgba(0,0,0,.3) solid;
+        }
+
+        .side-nav li a:hover,
+        .side-nav li a:focus {
+            outline: none;
+            background-color: #1BC6EF !important;
+        }
+    }
+
+
+
+    .side-nav>li>ul {
+        padding: 0;
+        border-bottom: 1px rgba(0,0,0,.3) solid;
+    }
+
+    .side-nav>li>ul>li>a {
+        display: block;
+        padding: 10px 15px 10px 38px;
+        text-decoration: none;
+        /*color: #999;*/
+        color: #fff;    
+    }
+
+    .side-nav>li>ul>li>a:hover {
+        color: #fff;
+    }
+
+    .navbar .nav > li > a > .label {
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      position: absolute;
+      top: 14px;
+      right: 6px;
+      font-size: 10px;
+      font-weight: normal;
+      min-width: 15px;
+      min-height: 15px;
+      line-height: 1.0em;
+      text-align: center;
+      padding: 2px;
+    }
+
+    .navbar .nav > li > a:hover > .label {
+      top: 10px;
+    }
+
+    
+    .sidebar
+    {
+        background: #141414; /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient(#141414,#2E2E2E, #141414); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(#141414, #2E2E2E, #141414); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(#141414, #2E2E2E, #141414); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(#141414, #2E2E2E, #141414); /* Standard syntax */
+    }
+    #submenu-1, #submenu-2, #submenu-3, #submenu-4 
+    {
+        background: #2F2F2F;
+    }
+    
+/*--------PAGE BD-----------*/
+
+    .chat {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+    }
+    .chat li {
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      border-bottom: 1px dotted #999999;
+    }
+    .chat li.left .chat-body {
+      margin-left: 60px;
+    }
+    .chat li.right .chat-body {
+      margin-right: 60px;
+    }
+    .chat li .chat-body p {
+      margin: 0;
+    }
+    .panel .slidedown .glyphicon,
+    .chat .glyphicon {
+      margin-right: 5px;
+    }
+    .chat-panel .panel-body {
+      height: 100%;
+      overflow-y: scroll;
+    }
+    .chat-panel .panel-footer
+    {
+        height: 50px;
+    }
+    .chat-panel .panel-heading
+    {
+        font-size: 18px;
+    }
+
+    
+
+    .chat .pull-right
+    {
+       
+      font-size: 16px;      
+      width: 100px;
+      text-align: right;
+
+       
+    }
+
+    .chat .name_album
+    {
+        font-size: 17px;
+    }
+     .chat .serie
+    {
+        font-size: 15px;
+    }
+    i.font
+    {
+        font-family: 'Bubbler One', sans-serif;
+    }
+    div.dernierBD-ajout
+    {
+       
+        margin: 10px;
+        box-shadow: 2px 4px 5px #191715;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-top: 1px #6A6A6A solid;
+        border-left: 1px #6A6A6A solid;
+
+
+    }
+    strong.tome_dernier-ajout
+    {
+        color: #e7480f;
+    }
+    div.panel-display
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    .titre-dernier-ajout
+    {
+        color: #20BAB6;
+        font-weight: bold;
+
+    }
+    div.div-one-shot
+    {
+        margin: 15px;
+        display: flex;
+        justify-content: center;
+    }
+    .bouton-delete
+    {
+        
+        margin-left: 10px;
+        
+        
+    }
+
+/*-------PAGE SERIES-----------*/
+    span.rouge>i.fa-cart-arrow-down
+    {
+        color: transparent;
+    }
+    a.a_modal
+    {
+        text-decoration:  none;
+    }
+    .modal-body-album
+    {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+        justify-content: center;
+    }
+    
+    .modal_album
+    {
+       margin: 5px; 
+    }
+    .modal-footer
+    {
+        font-size: 20px;
+        text-align: center;
+        background-color: #e7480f;
+        height: 45px;
+       
+        color: #202020;
+        padding-top: 8px;
+        font-family: 'Holtwood One SC', serif;
+    }
+    h4.modal_titreAlbum
+    {
+        font-size: 14px;
+    }
+    h4.modal_titreSerie
+    {
+        font-size: 20px;
+        text-align: center;
+        background-color: #e7480f;
+        height: 50px;
+        margin-top: 0;
+        color: #202020;
+        padding-top: 15px;
+        font-family: 'Holtwood One SC', serif;
+    }
+        /*bouton close modal popup series.php*/
+    button.close
+    {
+        margin: 15px;
+        color: blue;
+    }
+    h2
+    {
+        color: #C8C8C8;
+    }
+    span.serieTome
+    {
+        color: #e7480f;
+        text-align: center;
+    }
+    
+    h4.modal_titreAlbum
+        {
+            width: 80px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #e7480f;
+            margin: 0;
+        }
+    .h3-album-aleatoire
+    {
+        background: #e7480f;
+        height: 50px;
+        margin-top:0;
+        border-radius: 5px;
+        line-height: 2.4;
+        font-size: 20px;
+        color: #E1E0DF;
+    }
+    .titre-ajout-aleatoire
+    {
+        color: #20BAB6;
+        font-weight: bold;
+        height: 35px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        font-size: 12px;
+        margin-top: 0;
+    }
+    span.type-serie
+    {
+        color: #1BC6EF;
+        font-size: 12px;
+        font-family: 'Holtwood One SC', serif;
+    }
+    .div-span-serie
+    {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    span.genre
+    {
+        width: 30%;
+    }
+    .div-tome-serie
+    {
+        margin-top: -20px;
+    }
+    .bouton-serie
+    {
+        margin-top: -30px;
+    }
+    .header.serie
+    {
+        padding-top: 12px;
+    }
+    li.serie-complete
+    {
+       line-height: 2.1;
+        height: 45px;
+    }
+    strong.type-serie-wish-papier
+    {
+        background: rgba(26, 197, 195, 0.2);
+        width: 55px;
+        height: 30px;
+        line-height: 2.1;
+        margin-right: 15px;
+        text-align: center;
+        border-radius: 3px;
+        display: inline-block;
+    }
+    strong.type-serie-wish-epub
+    {
+        background: rgba(238, 95, 14, 0.2);
+        width: 55px;
+        height: 30px;
+        line-height: 2.1;
+        margin-right: 15px;
+        text-align: center;
+        border-radius: 3px;
+        display: inline-block;
+    }
+    strong.strong-name-serie
+    {
+        width: 58%;
+        display: inline-block;
+        
+    }
+    strong.strong-genre-serie
+    {
+        width: 10%;
+        display: inline-block;
+        
+    }
+    
+/*-----BOUTON ON/OFF (toggle) The switch - the box around the slider------*/
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+
+    /* Hide default HTML checkbox */
+    .switch input {display:none;}
+
+    /* The slider */
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    input:checked + .slider {
+      background-color: #1BC6EF;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #1BC6EF;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+
+/*-------DASHBOARD-----------*/
+    
+    .panel-bd-papier
+    {
+        background: #e7480f;
+    }
+    .panel-bd-epub
+    {
+        background: rgba(171, 231, 15, 0.8);
+    }
+    .panel-manga-papier
+    {
+        background: #1BC6EF;
+    }
+    .panel-manga-epub
+    {
+        background: #ECE70D;
+    }
+    .panel-wish-bd-papier
+    {
+        background: #e7480f;
+    }
+
+
+/*------footer---------*/
+    .footer
+    {
+        background: #141414; /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient(#141414, #434343, #141414); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(#141414, #434343, #141414); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(#141414, #434343, #141414); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(#141414, #434343, #141414); /* Standard syntax */
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .copy/*copyright*/
+    {
+        color: rgba(8, 208, 242, 1);
+    }
+
+
+/*-------cercle dessinés------*/
+    aside.circle-vert
+    {
+
+        background: rgba(171, 231, 15, 0.5);
+        width: 600px;
+        height: 180px;
+        border-radius: 50% 50%;
+
+        margin-left: -100px;
+        
+    }
+    aside.circle-orange
+    {
+        
+        background: rgba(238, 95, 14, 0.5);
+        width: 100%;
+        height: 100px;
+        border-radius: 30% 75%;
+        margin-left: 100px;
+       
+
+    }
+     aside.circle-bleu
+    {
+        
+        background: rgba(8, 208, 242, 0.5);
+        width: 80%;
+        height: 130px;
+        border-radius: 15% 85%;
+        margin-left: -20px;
+         margin-top: -50px;
+        
+
+    }
+    aside.circle-jaune
+    {
+        
+        background: rgba(240, 232, 7, 0.5);
+        width: 100%;
+        height: 100px;
+        border-radius: 80% 20%;
+        margin-right: 100px;
+         margin-top: -90px;
+         margin-left: -100px;
+        
+
+    }
+    .div-dessin-papillon
+    {
+    
+        margin-bottom: 10px;
+       justify-content: center;
+       align-items: center;
+        display: flex;
+        height: 200px;
+       
+
+
+    }
+    p.text-aside-circle
+    {
+        font-size: 60px;
+        margin: 0;
+        font-family: 'Holtwood One SC', serif;
+    }
+    /*html, body, #wrapper, #page-wrapper {height: 100%; overflow: hidden;}*/
+
+
+/*-------PAGE insert bd-----------*/
+    
+h3.text-aside-circle
+    {
+        font-size: 40px;
+        margin: 0;
+        font-family: 'Holtwood One SC', serif;
+    }
+
+/*------PAGE index.php----------*/ 
+    
+
+/*-------PAGE genre (fait partie de l'index)----------*/
+    .span-nbre-genre
+    {
+        color: #20BAB6;
+        font-size: 18px;
+    }
+        
+       
