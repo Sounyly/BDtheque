@@ -1,6 +1,6 @@
 <?php 
     require '../admin/database.php';
-    require '../admin/checkInput.php';
+    require '../func/checkInput.php';
 $nomError = $tomeError = $serieError = $genreError = $typeError = $imageError = $nom = $tome = $serie = $genre = $type = $image = "";
     if(!empty($_POST)) // Si le mot de passe est bon
     {
@@ -77,15 +77,15 @@ $nomError = $tomeError = $serieError = $genreError = $typeError = $imageError = 
             $statement = $db->prepare('INSERT INTO whishlist (name, tome, genre, serie, type, images, date_ajout) values ( ?, ?, ?, ?, ?, ?, now())');
             $statement->execute(array($nom, $tome, $genre, $serie, $type, $image));
             Database::disconnect();
-            header('Location:../bd/wishlist.php');
+            header('Location:../sections/wishlist.php');
         }
     }
     ?>
-<?php include("../pages/header.php");?>
+<?php include("../inc/header.php");?>
     <div id="throbber" style="display:none; min-height:120px;"></div>
     <div id="noty-holder"></div>
         <div id="wrapper">
-            <?php include("../pages/navbar.php"); ?>
+            <?php include("../inc/navbar.php"); ?>
             <div class="container">
                
                     <div id="page-wrapper">
@@ -162,7 +162,7 @@ $nomError = $tomeError = $serieError = $genreError = $typeError = $imageError = 
                                 <br>
                                 <div class="form-actions">
                                     <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span> Ajouter</button>
-                                    <a class="btn btn-primary" href="../index.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a>
+                                    <a class="btn btn-primary" href="../sections/wishlist.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a>
                                      
                                 </div>
                             </form>

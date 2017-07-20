@@ -2,7 +2,7 @@
 <?php 
     
     require '../admin/database.php';
-    require '../admin/checkInput.php';
+    require '../func/checkInput.php';
 
 $nomError = $genreError = $typeError = $imageError = $nom = $genre = $type = $image = "";
 
@@ -73,18 +73,18 @@ $nomError = $genreError = $typeError = $imageError = $nom = $genre = $type = $im
             $statement = $db->prepare('INSERT INTO one_shot (name, genre, type, images, date_ajout) values ( ?, ?, ?, ?, now())');
             $statement->execute(array($nom, $genre, $type, $image));
             Database::disconnect();
-            header('Location: index.php');
+            header('Location: ../sections/epub.php');
         }
     }
     
-    include("../pages/header.php") ;
+    include("../inc/header.php") ;
     
     ?>
 
     <div id="throbber" style="display:none; min-height:120px;"></div>
     <div id="noty-holder"></div>
         <div id="wrapper">
-            <?php include("../pages/navbar.php"); ?>
+            <?php include("../inc/navbar.php"); ?>
             <div class="container">
                
                     <div id="page-wrapper">

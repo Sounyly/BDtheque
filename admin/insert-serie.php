@@ -1,6 +1,6 @@
 <?php 
     require '../admin/database.php';
-    require '../fonc/checkInput.php';
+    require '../func/checkInput.php';
     $nomError = $tomeError = $genreError = $typeError = $nom = $tome = $genre = $type = "";
     if(!empty($_POST))
     {

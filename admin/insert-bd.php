@@ -1,6 +1,6 @@
 <?php 
 require '../admin/database.php';
-require '../admin/checkInput.php';
+require '../func/checkInput.php';
 $nomError = $tomeError = $serieError = $genreError = $typeError = $imageError = $nom = $tome = $serie = $genre = $type = $image = "";
     if(!empty($_POST)) // Si le mot de passe est bon
     {
@@ -80,12 +80,12 @@ $nomError = $tomeError = $serieError = $genreError = $typeError = $imageError = 
             header('Location: insert-bd.php');
         }
     }
-    include("../pages/header.php") ;
+    include("../inc/header.php") ;
     ?>
     <div id="throbber" style="display:none; min-height:120px;"></div>
     <div id="noty-holder"></div>
     <div id="wrapper">
-        <?php include("../pages/navbar.php"); ?>
+        <?php include("../inc/navbar.php"); ?>
 
         <div class="container m50">
             <div class="row">
@@ -171,7 +171,7 @@ $nomError = $tomeError = $serieError = $genreError = $typeError = $imageError = 
                                 <br>
                                 <div class="form-actions">
                                     <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span> Ajouter</button>
-                                    <a class="btn btn-primary" href="../index.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a>
+                                    <a class="btn btn-primary" href="../sections/papier.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a>
                                 </div>
                             </form>
                             <div class="col-lg-offset-2">

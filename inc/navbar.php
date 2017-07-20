@@ -43,13 +43,13 @@
                         <li><a href="#"> ePub</a></li>
                     </ul>
                 </li>
-                <li>
+               <!-- <li>
                     <a href="#" data-toggle="collapse" data-target="#submenu-2"><i class="fa fa-ravelry" aria-hidden="true"></i> Manga<i class="fa fa-fw fa-angle-down pull-right"></i></a>
                     <ul id="submenu-2" class="collapse">
                         <li><a href="#"> Papier</a></li>
                         <li><a href="#"> ePub</a></li>
                     </ul>
-                </li>
+                </li>-->
                 
                 <li>
                     <a href="#" data-toggle="collapse" data-target="#submenu-3"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Wishlist<i class="fa fa-fw fa-angle-down pull-right"></i></a>

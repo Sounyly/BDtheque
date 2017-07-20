@@ -228,6 +228,6 @@ include("../inc/header.php") ;
 </div><!-- /#page-wrapper -->
 </div><!-- fin #wrapper -->
 <!-- footer -->
-<?php include("../pages/footer.php") ; ?>
+<?php include("../inc/footer.php") ; ?>
 </body>
 </html>
