@@ -1,5 +1,6 @@
 <?php
-require '../func/functions.php';
+require_once '../func/functions.php';
+require_once '../admin/database.php';
 logged_only();
 if(!empty($_POST)){
 
@@ -9,7 +10,6 @@ if(!empty($_POST)){
         $db = Database::connect();
         $user_id = $_SESSION['auth']->id;
         $password= password_hash($_POST['password'], PASSWORD_BCRYPT);
-        require_once '../admin/database.php';
         $db->prepare('UPDATE membres SET password = ? WHERE id = ?')->execute([$password, $user_id]);
         $_SESSION['flash']['success'] = "Votre mot de passe a bien été mis à jour";
         Database::disconnect();

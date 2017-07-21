@@ -1,30 +1,33 @@
 <?php
 require_once '../func/functions.php';
 session_start();
+require_once '../admin/database.php';
+$db = Database::connect();
 if(!empty($_POST)){
+    
     $errors = array();
-    require_once '../admin/database.php';
     if(empty($_POST['username']) || !preg_match('/^[a-zA-Z0-9_]+$/', $_POST['username'])){
         $errors['username'] = "Votre pseudo n'est pas valide (alphanumérique)";
     } else {//si le pseudo est déja prit
-        $db = Database::connect();
+        
         $req = $db->prepare('SELECT id FROM membres WHERE username = ?');
         $req->execute([$_POST['username']]);
         $user = $req->fetch();
-        Database::disconnect();
+        
         if($user){
             $errors['username'] = 'Ce pseudo est déjà pris';
         }
     }
-        //filter_var controler le format de l'email , filtre email à utiliser    
+   
+        //filter_var controle le format de l'email , filtre email à utiliser    
     if(empty($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
         $errors['email'] = "Votre email n'est pas valide";
     } else {
-        $db = Database::connect();
+       
         $req = $db->prepare('SELECT id FROM membres WHERE email = ?');
         $req->execute([$_POST['email']]);
         $user = $req->fetch();
-        Database::disconnect();
+        
         if($user){
             $errors['email'] = 'Cet email est déjà utilisé pour un autre compte';
         }
@@ -33,11 +36,12 @@ if(!empty($_POST)){
         $errors['password'] = "Vous devez rentrer un mot de passe valide";
     }
 if(empty($errors)){
-    $db = Database::connect();
+    
     $req = $db->prepare("INSERT INTO membres SET username = ?, password = ?, email = ?, confirmation_token = ?");
     //cryptage mdp
     $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
-    //
+    //fonction qui récupere au hasard 60 caracteres de la clef de cryptage, ces caractéres seront
+    //ensuite envoyer au visiteur sous forme de lien cliquable qui permet de confirmer/valider l'inscription
     $token = str_random(60);
     $req->execute([$_POST['username'], $password, $_POST['email'], $token]);
     //lastInsertId renvoie le dernier id générer par pdo
@@ -47,8 +51,7 @@ if(empty($errors)){
     Database::disconnect();
     header('Location: login.php');
     exit();
-}
-debug($errors);
+    }
 }
 ?>
 
