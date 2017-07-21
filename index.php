@@ -1,52 +1,21 @@
-<?php
-require 'admin/database.php';
-include("inc/header.php") ;
-?>
+<?php include("account/header_account.php");?>
 
-<body>
 
-    <div id="throbber" style="display:none; min-height:120px;"></div>
-<div id="noty-holder"></div>
-<div id="wrapper">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-offset-2 col-lg-8 text-center">
+            <div class="jumbotron text-left">
+                <h1>Vous devez être enregistrer pour accéder à la BDthéque</h1><br>
 
-       <?php include("inc/navbar.php"); ?>
-       <div id="page-wrapper">
-        <div class="container-fluid">
-        <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Welcome!</h1>
+                <div class="text-center">
+                    <button type="button" class="btn"><a href="/bdthek/account/register.php">S'inscrire</a></button>
+                    <button type="button" class="btn btn-warning"><a href="/bdthek/account/login.php">Se connecter</a></button>
+
+
 
                 </div>
-                <!-- /.col-lg-12 -->
             </div>
-           <?php include("inc/dashboard.php"); ?>
-           <div class="row">
-
-           	
-            <?php include("sections/genre.php"); ?>
-         
-
-            <!-- /.col-lg-6 -->
-                <div class="col-lg-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Graphique des genres
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div id="morris-donut-chart"></div>
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
         </div>
-        <!-- /.container-fluid -->
+        <div class="col-lg-offset-2"></div>
     </div>
-    <!-- /#page-wrapper -->
-       
 </div>
-<?php include("inc/footer.php") ; ?>
-</body>
-
-</html>

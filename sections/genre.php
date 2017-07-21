@@ -36,7 +36,7 @@
 									<h4 class="col-lg-12 text-center">'.$donnees['nom_genre']. '</h4><br>
 									<div class="row">
 										<div class="col-lg-12 text-center">
-											<img src="images/'.$donnees['img_album'].'" alt="Cover BD" width="70px" height="70px" class="img-circle">
+											<img src="../images/'.$donnees['img_album'].'" alt="Cover BD" width="70px" height="70px" class="img-circle">
 										</div>
 									</div>
 								</div>

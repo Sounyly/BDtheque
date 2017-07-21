@@ -33,7 +33,7 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse ">
             <ul class="nav navbar-nav side-nav sidebar">
                 <li>
-                    <a href="/bdthek/index.php">Accueil</a>
+                    <a href="/bdthek/sections/accueil.php">Accueil</a>
                 </li>
 
                 <li>
