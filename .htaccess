@@ -1,0 +1,4 @@
+AuthName "Site privé, vous devez vous connecter pour y accéder"
+AuthType Basic
+AuthUserFile "/Users/sounyly/Sites/bdthek/.htpasswd"
+Require valid-user
